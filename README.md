@@ -19,3 +19,8 @@ x=&y=起始文字的x、y坐标，默认x=10y=40，可选
 font=字体文件，默认=./fonts/arialuni.ttf（Unicode），可选
 
 text=文本，默认=（空白则等效直接输出背景图），可选
+
+
+使用举例：
+
+http://106.52.30.88/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC&image=blackboard.jpeg&x=100&y=120&r=255&g=255&b=255&i=2&size=40&font=fonts/msyh.ttf
