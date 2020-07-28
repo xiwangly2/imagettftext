@@ -27,4 +27,10 @@ http://106.52.30.88/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%E6%B
 
 http://api.xiwangly.xyz/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC&image=blackboard.jpeg&x=100&y=120&r=255&g=255&b=255&i=2&size=40&font=fonts/msyh.ttf
 
+在QRSpeed中的应用举例：
+
+白板 [\s\S]*(.*)[\s\S]*<br>
+e:$URLEncoder %参数1%$<br>
+绘制白板结果：【±img=http://106.52.30.88/img.php?url=http\%3A\%2F\%2F106.52.30.88\%2Fimagettftext\%2F\%3Ftext\%3D%e%±】
+
 下载后最好把文件夹.\*-master（其它分支同理）重命名为.\*，并且推荐解析到该文件夹，或者直接把下载后文件夹内的文件（选择性）拖放到wwwroot（一般指网站根目录）
