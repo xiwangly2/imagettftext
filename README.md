@@ -16,7 +16,7 @@ i=字体倾斜的角度，默认=0，可选
 
 x=&y=起始文字的x、y坐标，默认x=10y=40，可选
 
-font=字体文件，默认=./fonts/arialuni.ttf（Unicode），可选
+font=字体文件，默认=./fonts/arialuni.ttf（Unicode字符集），可选
 
 text=文本（强烈建议字符串先进行url(utf-8)编码再提交get表单），默认=（空白则等效直接输出背景图），可选
 
