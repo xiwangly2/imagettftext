@@ -35,9 +35,9 @@ http://api.xiwangly.xyz/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%
 
 在QRSpeed中的应用举例：
 
-白板 [\s\S]*(.*)[\s\S]*
-t:白板 
-a:$替换 Э %参数-1%Э%t%Э$
+白板 [\s\S]*(.*)[\s\S]*<br>
+t:白板 <br>
+a:$替换 Э %参数-1%Э%t%Э$<br>
 绘制白板结果：【±img=http://106.52.30.88/imagettftext/?text=%a%&image=white2.png±】
 
 下载后最好把文件夹.\*-master（其它分支同理）重命名为.\*，并且推荐解析到该文件夹，或者直接把下载后文件夹内的文件（选择性）拖放到wwwroot（一般指网站根目录）
