@@ -7,6 +7,8 @@
 精简了代码，优化返回速度<br>
 修复了图片格式及head头的mime不能正确判断的问题
 
+2020/8/1更新：现在可以输出条形码（需要选择正确的字体）
+
 get表单：
 
 image=本地图像（与imageurl不能同时出现），默认=white.png（./images/white.png），可选
