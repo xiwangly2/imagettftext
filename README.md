@@ -45,3 +45,5 @@ a:$替换 Э %参数-1%Э%t%Э$<br>
 绘制白板结果：【±img=http://106.52.30.88/imagettftext/?text=%a%&image=white2.png±】
 
 下载后最好把文件夹.\*-master（其它分支同理）重命名为.\*，并且推荐解析到该文件夹，或者直接把下载后文件夹内的文件（选择性）拖放到wwwroot（一般指网站根目录）
+
+感谢@的美化版imagettftext：http://api.muxiuge.cn/imagetext
