@@ -11,7 +11,7 @@ font=字体文件，默认=./fonts/arialuni.ttf（Unicode），可选
 text=文本，默认=（空白则等效直接输出背景图），可选
 */
 //图像资源
-$image_get = $_GET["image"];
+$image_get = basename($_GET['image']);
 $imageurl = $_GET["imageurl"];
 if($image_get == "")
 {
@@ -91,7 +91,7 @@ if($x == "" || $y == "")
 	$y = "40";
 }
 //字体文件
-$font = $_GET["font"];
+$font = basename($_GET['font']);
 if($font == "")
 {
 	$font = "./fonts/arialuni.ttf";
