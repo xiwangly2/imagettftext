@@ -11,6 +11,8 @@
 
 2020/8/17更新：基于安全性的更新，感谢<a href="https://github.com/iVampireSP">@iVampireSP</a>的帮助
 
+2020/8/20更新：支持更多图片类型，精简代码，优化速度（采用面向过程写法）
+
 get表单：
 
 image=本地图像（与imageurl不能同时出现），默认=white.png（./images/white.png），可选
