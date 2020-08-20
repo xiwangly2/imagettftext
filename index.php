@@ -61,6 +61,12 @@ if($imageurl != "")
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
+	elseif($mime == "image/bmp")
+	{
+		$filetype == ".bmp";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
+	}
 	else
 	{
 		$filetype == ".png";
@@ -96,6 +102,10 @@ elseif($mime == "image/x-xbitmap")
 elseif($mime == "image/webp")
 {
 	$image = @imagecreatefromwebp("./images/{$image_get}");
+}
+elseif($mime == "image/bmp")
+{
+	$image = @imagecreatefrombmp("./images/{$image_get}");
 }
 else
 {
@@ -171,6 +181,11 @@ elseif($mime == "image/x-xbitmap")
 elseif($mime == "image/webp")
 {
 	header("Content-Type: image/webp; charset=utf-8");
+	@imagegif($image);
+}
+elseif($mime == "image/bmp")
+{
+	header("Content-Type: image/bmp; charset=utf-8");
 	@imagegif($image);
 }
 else
