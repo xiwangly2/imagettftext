@@ -1,5 +1,6 @@
 <?php
 /*
+php版本需>7.1
 get表单：
 image=本地图像（与imageurl不能同时出现），默认=white.png（./images/white.png），可选
 imageurl=远程图像（与image不能同时出现）默认=，可选
@@ -11,7 +12,7 @@ font=字体文件，默认=./fonts/arialuni.ttf（Unicode），可选
 text=文本，默认=（空白则等效直接输出背景图），可选
 */
 //图像资源
-$image_get = basename($_GET['image']);
+$image_get = @basename($_GET['image']);
 $imageurl = $_GET["imageurl"];
 if($image_get == "")
 {
@@ -20,44 +21,85 @@ if($image_get == "")
 if($imageurl != "")
 {
 	$sran = uniqid("");
-	$img = file_get_contents($imageurl,true);
-	$info = getimagesize($imageurl);
+	$img = @file_get_contents($imageurl,true);
+	$info = @getimagesize($imageurl);
+	//mime是获取正确文件类型的关键（未知文件类型将默认采用png）
 	$mime = $info["mime"];
 	if($mime == "image/png")
 	{
 		$filetype == ".png";
-		file_put_contents("./images/download{$sran}.png",$img);
-		$image_get = "download{$sran}.png";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/jpeg")
 	{
 		$filetype == ".jpeg";
-		file_put_contents("./images/download{$sran}.jpeg",$img);
-	$image_get = "download{$sran}.jpeg";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+	$image_get = "download{$sran}{$filetype}";
+	}
+	elseif($mime == "image/gif")
+	{
+		$filetype == ".gif";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
+	}
+	elseif($mime == "image/vnd.wap.wbmp")
+	{
+		$filetype == ".wbmp";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
+	}
+	elseif($mime == "image/x-xbitmap")
+	{
+		$filetype == ".xbm";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
+	}
+	elseif($mime == "image/webp")
+	{
+		$filetype == ".webp";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
 	}
 	else
 	{
-		$filetype == ".gif";
-		file_put_contents("./images/download{$sran}.gif",$img);
-		$image_get = "download{$sran}.gif";
+		$filetype == ".png";
+		@file_put_contents("./images/download{$sran}{$filetype}",$img);
+		$image_get = "download{$sran}{$filetype}";
 	}
 }
 else
 {
-	$info = getimagesize("./images/".$image_get);
+	$info = @getimagesize("./images/".$image_get);
 	$mime = $info["mime"];
 }
 if($mime == "image/png")
 {
-	$image = imagecreatefrompng("./images/{$image_get}");
+	$image = @imagecreatefrompng("./images/{$image_get}");
 }
 elseif($mime == "image/jpeg")
 {
-	$image = imagecreatefromjpeg("./images/{$image_get}");
+	$image = @imagecreatefromjpeg("./images/{$image_get}");
+}
+elseif($mime == "image/gif")
+{
+	$image = @imagecreatefromgif("./images/{$image_get}");
+}
+elseif($mime == "image/vnd.wap.wbmp")
+{
+	$image = @imagecreatefromwbmp("./images/{$image_get}");
+}
+elseif($mime == "image/x-xbitmap")
+{
+	$image = @imagecreatefromxbm("./images/{$image_get}");
+}
+elseif($mime == "image/webp")
+{
+	$image = @imagecreatefromwebp("./images/{$image_get}");
 }
 else
 {
-	$image = imagecreatefromgif("./images/{$image_get}");
+	$image = @imagecreatefrompng("./images/{$image_get}");
 }
 //颜色
 $r = $_GET["r"];
@@ -69,7 +111,7 @@ if($r == "" || $g == "" || $b == "")
 	$g = "0";
 	$b = "0";
 }
-$color = imagecolorallocate($image,$r,$g,$b);
+$color = @imagecolorallocate($image,$r,$g,$b);
 //字体大小
 $size = $_GET["size"];
 if($size == "")
@@ -91,7 +133,7 @@ if($x == "" || $y == "")
 	$y = "40";
 }
 //字体文件
-$font = basename($_GET['font']);
+$font = @basename($_GET['font']);
 if($font == "")
 {
 	$font = "./fonts/arialuni.ttf";
@@ -99,38 +141,47 @@ if($font == "")
 //文本，使用"%0a"换行
 $text = $_GET["text"];
 //绘制文字
-imagettftext($image,$size,$i,$x,$y,$color,$font,$text);
+@imagettftext($image,$size,$i,$x,$y,$color,$font,$text);
 //输出图像资源
 if($mime == "image/png")
 {
 	header("Content-Type: image/png; charset=utf-8");
-	imagepng($image);
+	@imagepng($image);
 }
 elseif($mime == "image/jpeg")
 {
 	header("Content-Type: image/jpeg; charset=utf-8");
-	imagejpeg($image);
+	@imagejpeg($image);
+}
+elseif($mime == "image/gif")
+{
+	header("Content-Type: image/gif; charset=utf-8");
+	@imagegif($image);
+}
+elseif($mime == "image/vnd.wap.wbmp")
+{
+	header("Content-Type: image/vnd.wap.wbmp; charset=utf-8");
+	@imagegif($image);
+}
+elseif($mime == "image/x-xbitmap")
+{
+	header("Content-Type: image/x-xbitmap; charset=utf-8");
+	@imagegif($image);
+}
+elseif($mime == "image/webp")
+{
+	header("Content-Type: image/webp; charset=utf-8");
+	@imagegif($image);
 }
 else
 {
-	header("Content-Type: image/gif; charset=utf-8");
-	imagegif($image);
+	header("Content-Type: image/png; charset=utf-8");
+	@imagegif($image);
 }
 //删除图片以释放空间
-imagedestroy($image);
+@imagedestroy($image);
 if($imageurl != "")
 {
-	if($mime == "image/png")
-	{
-		unlink("./images/download{$sran}.png");
-	}
-	elseif($mime == "image/jpeg")
-	{
-		unlink("./images/download{$sran}.jpeg");
-	}
-	else
-	{
-		unlink("./images/download{$sran}.gif");
-	}
+	@unlink("./images/download{$sran}{$filetype}");
 }
 ?>
