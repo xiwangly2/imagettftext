@@ -12,7 +12,7 @@
 2020/8/17更新：基于安全性的更新，感谢<a href="https://github.com/iVampireSP">@iVampireSP</a>的帮助
 
 2020/8/20更新：支持更多图片类型，精简代码，优化速度（采用面向过程写法）
-<br>如果出现"imagettftext(): Could not find/open font"报错，请检查这个字体文件是否存在，并尝试在$font变量中增加"dirname(\_\_FILE\_\_)"（可能需要根据代码调整位置），即使用绝对路径访问文件。如果您是宝塔用户，请关闭防跨站攻击(open_basedir)，注意取消勾选了此复选框可能会导致意料之外的安全问题，因此建议您将这个源码单独开设网站
+<br>如果出现"imagettftext(): Could not find/open font"报错，请检查这个字体文件是否存在，并尝试在$font变量中增加"dirname(\_\_FILE\_\_)"或"realpath()"（需要根据代码调整位置），即使用绝对路径访问文件。
 <!--为了能正常显示markdown，这里使用了转义-->
 
 get表单：
