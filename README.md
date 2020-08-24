@@ -12,6 +12,7 @@
 2020/8/17更新：基于安全性的更新，感谢<a href="https://github.com/iVampireSP">@iVampireSP</a>的帮助
 
 2020/8/20更新：支持更多图片类型，精简代码，优化速度（采用面向过程写法）
+<br>如果出现"imagettftext(): Could not find/open font"报错，请检查这个字体文件是否存在，并尝试在$font变量中增加"dirname(__FILE__)"（可能需要根据代码调整位置），即使用绝对路径访问文件
 
 get表单：
 
