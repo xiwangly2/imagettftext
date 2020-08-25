@@ -1,5 +1,5 @@
 # imagettftext
-
+<!--本项目开源地址：https://github.com/xiwangly2/imagettftext-->
 这是关于php GD库的应用，这个源码将使您可以自定义的打印一些内容在图片上
 
 2020/7/29重大更新：（强烈建议已下载的用户重新下载，可以选择性下载）<br>
