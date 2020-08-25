@@ -146,7 +146,11 @@ if($x == "" || $y == "")
 $font = @basename($_GET['font']);
 if($font == "")
 {
-	$font = "./fonts/arialuni.ttf";
+	$font = @realpath("fonts/arialuni.ttf");
+}
+else
+{
+	$font = @realpath($_GET['font']);
 }
 //文本，使用"%0a"换行
 $text = $_GET["text"];
