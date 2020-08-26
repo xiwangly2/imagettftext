@@ -15,6 +15,7 @@
 
 **get表单：**
 > image=本地图像（与imageurl不能同时出现），默认=white.png（./images/white.png），可选
+
 > imageurl=远程图像（与image不能同时出现）默认=，可选
 
 > r=&g=&b=颜色r,g,b，默认r=0&g=0&b=0（范围0-255），可选
@@ -37,10 +38,10 @@
 [举例2](http://api.xiwangly.xyz/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC&image=blackboard.jpeg&x=100&y=120&r=255&g=255&b=255&i=2&size=40&font=fonts/msyh.ttf)：![举例2](http://api.xiwangly.xyz/imagettftext/?text=%E8%BF%99%E6%98%AF%E4%B8%80%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC&image=blackboard.jpeg&x=100&y=120&r=255&g=255&b=255&i=2&size=40&font=fonts/msyh.ttf)<br>
 
 **在QRSpeed中的应用举例：**
-
-白板 [\s\S]*(.*)[\s\S]*<br>
-t:白板 <br>
-a:$替换 Э %参数-1%Э%t%Э$<br>
+```
+白板 [\s\S]*(.*)[\s\S]*
+t:白板 
+a:$替换 Э %参数-1%Э%t%Э$
 绘制白板结果：【±img=http://106.52.30.88/imagettftext/?text=%a%&image=white2.png±】
-
+```
 感谢@的美化版imagettftext：http://api.muxiuge.cn/imagetext
