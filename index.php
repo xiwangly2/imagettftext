@@ -159,42 +159,42 @@ $text = $_GET["text"];
 //输出图像资源
 if($mime == "image/png")
 {
-	header("Content-Type: image/png; charset=utf-8");
+	header("Content-Type: image/png");
 	@imagepng($image);
 }
 elseif($mime == "image/jpeg")
 {
-	header("Content-Type: image/jpeg; charset=utf-8");
+	header("Content-Type: image/jpeg");
 	@imagejpeg($image);
 }
 elseif($mime == "image/gif")
 {
-	header("Content-Type: image/gif; charset=utf-8");
+	header("Content-Type: image/gif");
 	@imagegif($image);
 }
 elseif($mime == "image/vnd.wap.wbmp")
 {
-	header("Content-Type: image/vnd.wap.wbmp; charset=utf-8");
+	header("Content-Type: image/vnd.wap.wbmp");
 	@imagegif($image);
 }
 elseif($mime == "image/x-xbitmap")
 {
-	header("Content-Type: image/x-xbitmap; charset=utf-8");
+	header("Content-Type: image/x-xbitmap");
 	@imagegif($image);
 }
 elseif($mime == "image/webp")
 {
-	header("Content-Type: image/webp; charset=utf-8");
+	header("Content-Type: image/webp");
 	@imagegif($image);
 }
 elseif($mime == "image/bmp")
 {
-	header("Content-Type: image/bmp; charset=utf-8");
+	header("Content-Type: image/bmp");
 	@imagegif($image);
 }
 else
 {
-	header("Content-Type: image/png; charset=utf-8");
+	header("Content-Type: image/png");
 	@imagegif($image);
 }
 //删除图片以释放空间
