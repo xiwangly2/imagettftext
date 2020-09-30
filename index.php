@@ -27,49 +27,49 @@ if($imageurl != "")
 	$mime = $info["mime"];
 	if($mime == "image/png")
 	{
-		$filetype == ".png";
+		$filetype = ".png";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/jpeg")
 	{
-		$filetype == ".jpeg";
+		$filetype = ".jpeg";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 	$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/gif")
 	{
-		$filetype == ".gif";
+		$filetype = ".gif";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/vnd.wap.wbmp")
 	{
-		$filetype == ".wbmp";
+		$filetype = ".wbmp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/x-xbitmap")
 	{
-		$filetype == ".xbm";
+		$filetype = ".xbm";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/webp")
 	{
-		$filetype == ".webp";
+		$filetype = ".webp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/bmp")
 	{
-		$filetype == ".bmp";
+		$filetype = ".bmp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	else
 	{
-		$filetype == ".png";
+		$filetype = ".png";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
