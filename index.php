@@ -1,6 +1,6 @@
 <?php
 /*
-php版本需>7.1
+php版本需>7.1，需安装GD扩展
 get表单：
 image=本地图像（与imageurl不能同时出现），默认=white.png（./images/white.png），可选
 imageurl=远程图像（与image不能同时出现）默认=，可选
@@ -21,55 +21,56 @@ if($image_get == "")
 if($imageurl != "")
 {
 	$sran = uniqid("");
-	$img = @file_get_contents($imageurl,true);
-	$info = @getimagesize($imageurl);
+	$img = @file_get_contents($imageurl);
+	@file_put_contents("./images/download{$sran}.bin",$img);
+	$info = @getimagesize("./images/download{$sran}.bin");
 	//mime是获取正确文件类型的关键（未知文件类型将默认采用png）
 	$mime = $info["mime"];
 	if($mime == "image/png")
 	{
-		$filetype = ".png";
+		$filetype == ".png";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/jpeg")
 	{
-		$filetype = ".jpeg";
+		$filetype == ".jpeg";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 	$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/gif")
 	{
-		$filetype = ".gif";
+		$filetype == ".gif";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/vnd.wap.wbmp")
 	{
-		$filetype = ".wbmp";
+		$filetype == ".wbmp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/x-xbitmap")
 	{
-		$filetype = ".xbm";
+		$filetype == ".xbm";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/webp")
 	{
-		$filetype = ".webp";
+		$filetype == ".webp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	elseif($mime == "image/bmp")
 	{
-		$filetype = ".bmp";
+		$filetype == ".bmp";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
 	else
 	{
-		$filetype = ".png";
+		$filetype == ".png";
 		@file_put_contents("./images/download{$sran}{$filetype}",$img);
 		$image_get = "download{$sran}{$filetype}";
 	}
@@ -202,5 +203,6 @@ else
 if($imageurl != "")
 {
 	@unlink("./images/download{$sran}{$filetype}");
+	@unlink("./images/download{$sran}.bin");
 }
 ?>
