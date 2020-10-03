@@ -160,42 +160,42 @@ $text = $_GET["text"];
 //输出图像资源
 if($mime == "image/png")
 {
-	header("Content-Type: image/png");
+	header("Content-Type:image/png");
 	@imagepng($image);
 }
 elseif($mime == "image/jpeg")
 {
-	header("Content-Type: image/jpeg");
+	header("Content-Type:image/jpeg");
 	@imagejpeg($image);
 }
 elseif($mime == "image/gif")
 {
-	header("Content-Type: image/gif");
+	header("Content-Type:image/gif");
 	@imagegif($image);
 }
 elseif($mime == "image/vnd.wap.wbmp")
 {
-	header("Content-Type: image/vnd.wap.wbmp");
+	header("Content-Type:image/vnd.wap.wbmp");
 	@imagegif($image);
 }
 elseif($mime == "image/x-xbitmap")
 {
-	header("Content-Type: image/x-xbitmap");
+	header("Content-Type:image/x-xbitmap");
 	@imagegif($image);
 }
 elseif($mime == "image/webp")
 {
-	header("Content-Type: image/webp");
+	header("Content-Type:image/webp");
 	@imagegif($image);
 }
 elseif($mime == "image/bmp")
 {
-	header("Content-Type: image/bmp");
+	header("Content-Type:image/bmp");
 	@imagegif($image);
 }
 else
 {
-	header("Content-Type: image/png");
+	header("Content-Type:image/png");
 	@imagegif($image);
 }
 //删除图片以释放空间
