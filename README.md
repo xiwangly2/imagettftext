@@ -1,6 +1,6 @@
 # imagettftext
 <!--本项目开源地址：https://github.com/xiwangly2/imagettftext-->
-imagettftext是image ttf text的连写，部分文档将其简写为ITT<br/>
+imagettftext是image ttf text的连写，部分文档将其简写为ITT（中文：图像文本，文字转图像）<br/>
 这是关于php GD库的应用，这个源码将使您可以自定义的打印一些内容在图片上（文字转图片）<br/>
 建议在php7.4的版本下运行,下载后最好把文件夹.\*-master（其它分支同理）重命名为.\*，并且推荐解析到该文件夹，或者直接把下载后文件夹内的文件（选择性）拖放到wwwroot（一般指网站根目录）
 
