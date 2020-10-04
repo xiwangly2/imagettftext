@@ -15,7 +15,7 @@ imagettftext是image ttf text的连写，部分文档将其简写为ITT（中文
 > <br/>2020/8/25更新：解决部分服务器不能引用字体文件的问题（统一采用了使用绝对路径引用字体文件）
 
 **get表单：**
-> image=本地图像（如果imageurl=（空），则此项无效），默认=white.png（./images/white.png），可选<br/>
+> image=本地图像（如果imageurl!=（空），则此项无效），默认=white.png（./images/white.png），可选<br/>
 > imageurl=远程图像，默认=（空），可选<br/>
 > r=&g=&b=颜色r,g,b，默认r=0&g=0&b=0（范围0-255），可选<br/>
 > size=字体大小，默认=30（根据版本决定单位），可选<br/>
