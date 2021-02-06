@@ -4,9 +4,9 @@
 
 概述：（请自行下载预览）
 
-arialuni.ttf Unicode字体
+arialuni.ttf Arial Unicode MS字体
 
-arial_unicode_ms.ttf Unicode 微软字体，比arialuni.ttf字符集更多一些
+arial_unicode_ms.ttf Arial Unicode MS字体，比arialuni.ttf字符集更多一些
 
 barcode.ttf 条形码字体，用于打印条形码
 
