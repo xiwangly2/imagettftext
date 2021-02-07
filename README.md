@@ -31,3 +31,5 @@ sursong.ttf 方正超大字符集宋体（此分支中为了节省大小压缩�
 NotoSansCJK-Regular.ttc Android中日韩字体
 
 NotoSerifCJK-Regular.ttc Android中日韩衬线字体
+
+Symbola.otf 符号a字体
