@@ -4,7 +4,7 @@
 
 概述：（请自行下载预览）
 
-arialuni.ttf Arial Unicode MS字体
+arialuni.ttf Arial Unicode MS字体（更多支持见www.unicode.org）
 
 arial_unicode_ms.ttf Arial Unicode MS字体，比arialuni.ttf字符集更多一些
 
