@@ -11,7 +11,7 @@ imagettftext是image ttf text的连写（中文：图像文本，文字转图像
 > 精简了代码，优化返回速度<br/>
 > 修复了图片格式及head头的mime不能正确判断的问题
 > <br/>2020/8/1更新：现在可以输出条形码（需要选择正确的字体）
-> <br/>2020/8/17更新：基于安全性的更新，感谢<a href="https://github.com/iVampireSP">@iVampireSP</a>的帮助
+> <br/>2020/8/17更新：基于安全性的更新，感谢[@iVampireSP](https://github.com/iVampireSP)的帮助
 > <br/>2020/8/20更新：支持更多图片类型，精简代码，优化速度（采用面向过程写法）<!--如果出现"imagettftext(): Could not find/open font"报错，请检查这个字体文件是否存在，并尝试在$font变量中增加`dirname(\_\_FILE\_\_)`或`realpath()`（需要根据代码调整位置），即使用绝对路径访问文件。为了能正常显示markdown，这里使用了转义-->
 > <br/>2020/8/25更新：解决部分服务器不能引用字体文件的问题（统一采用了使用绝对路径引用字体文件）
 
@@ -44,4 +44,4 @@ t:白板
 a:$替换 Э %参数-1%Э%t%Э$
 绘制白板结果：【±img=http://106.52.30.88/imagettftext/?text=%a%&image=white2.png±】
 ```
-感谢@的美化版imagettftext：http://api.muxiuge.cn/imagetext
+感谢@的美化版imagettftext：<http://api.muxiuge.cn/imagetext>
