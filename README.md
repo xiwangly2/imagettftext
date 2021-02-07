@@ -27,3 +27,7 @@ Microsoft_YaHei.ttf 微软雅黑
 Microsoft_YaHeibd.ttf微软雅黑粗体
 
 sursong.ttf 方正超大字符集宋体（此分支中为了节省大小压缩在了sursong.zip）
+
+NotoSansCJK-Regular.ttc Android中日韩字体
+
+NotoSerifCJK-Regular.ttc Android中日韩衬线字体
