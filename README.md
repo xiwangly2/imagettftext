@@ -33,3 +33,5 @@ NotoSansCJK-Regular.ttc Android中日韩字体
 NotoSerifCJK-Regular.ttc Android中日韩衬线字体
 
 Symbola.otf 符号a字体
+
+更多推荐的开源字体：
