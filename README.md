@@ -35,3 +35,7 @@ NotoSerifCJK-Regular.ttc Android中日韩衬线字体
 Symbola.otf 符号a字体
 
 更多推荐的开源字体：
+
+[Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)
+
+......
