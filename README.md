@@ -22,7 +22,7 @@ imagettftext是image ttf text的连写（中文：图像文本，文字转图像
 > size=字体大小，默认=30（根据版本决定单位），可选<br/>
 > i=字体倾斜的角度，默认=0，可选<br/>
 > x=&y=起始文字的x、y坐标，默认x=10y=40，可选<br/>
-> font=字体文件，默认=./fonts/arialuni.ttf（Unicode标准），可选<br/>
+> font=字体文件，默认=arialuni.ttf（./fonts/arialuni.ttf），可选<br/>
 > text=文本（强烈建议字符串先进行url(utf-8)编码再提交get表单），默认=（空白则等效直接输出背景图），可选<br/>
 
 **字体说明**
