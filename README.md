@@ -44,4 +44,4 @@ t:白板
 a:$替换 Э %参数-1%Э%t%Э$
 绘制白板结果：【±img=http://106.52.30.88/imagettftext/?text=%a%&image=white2.png±】
 ```
-感谢@的美化版imagettftext：<http://api.muxiuge.cn/imagetext>
+感谢[@mufeng233](https://github.com/mufeng233)的美化版imagettftext：<http://api.muxiuge.cn/imagetext>
