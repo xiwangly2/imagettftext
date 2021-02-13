@@ -40,7 +40,7 @@ Adobe Source
 
 Adobe Source Han
 
-Google Fonts
+[Google Fonts](https://github.com/google/fonts)
 
 [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)
 
