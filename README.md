@@ -37,8 +37,11 @@ Symbola.otf 符号a字体
 更多推荐的开源字体：
 
 Adobe Source
+
 Adobe Source Han
+
 Google Fonts
+
 [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)
 
 ......
