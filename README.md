@@ -5,7 +5,7 @@ imagettftext是image ttf text的连写（中文：图像文本，文字转图像
 建议在php7.4的版本下运行,下载后最好把文件夹.\*-master（其它分支同理）重命名为.\*，并且推荐解析到该文件夹，或者直接把下载后文件夹内的文件（选择性）拖放到wwwroot（一般指网站根目录）
 
 **更新日志**
-> 2021/2/6更新，扩展字体已移至[fonts](https://github.com/xiwangly2/imagettftext/tree/fonts)分支
+> 2021/2/6更新，扩展字体已移至[fonts](https://github.com/xiwangly2/imagettftext/tree/fonts)分支<br/>
 > 2020/7/29重大更新：（强烈建议已下载的用户重新下载，可以选择性下载）<br/>
 > 修复了远程图片不能正确打印输出的问题，修复了动态图片（及301、302跳转）链接不能输出的问题<br/>
 > 精简了代码，优化返回速度<br/>
