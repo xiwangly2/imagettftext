@@ -1,8 +1,8 @@
 # fonts
 **字体说明**
-<br/>字体均来源于网络及系统原文件，如有侵权请联系作者删除！
+<br/>字体均来源于网络，如有侵权请联系作者删除！
 
-<br/>原Microsoft_YaHeibd.ttf,Microsoft_YaHeibd.ttf字体因未获得版权已将其从项目中删除
+<br/>原Microsoft_YaHeibd.ttf,Microsoft_YaHeibd.ttf等字体因版权问题已将其从项目中移除
 
 概述：（请自行下载预览）
 
