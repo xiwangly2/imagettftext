@@ -165,6 +165,38 @@ $text = $_GET['text'];
 @imagettftext($image,$size,$i,$x,$y,$color,$font,$text);
 //输出图像资源
 @header("Content-Type:{$mime}");
+if($mime == 'image/png')
+{
+	@imagepng($image);
+}
+elseif($mime == 'image/jpeg')
+{
+	@imagejpeg($image);
+}
+elseif($mime == 'image/gif')
+{
+	@imagegif($image);
+}
+elseif($mime == 'image/vnd.wap.wbmp')
+{
+	@imagewbmp($image);
+}
+elseif($mime == 'image/x-xbitmap')
+{
+	@imagexbm($image);
+}
+elseif($mime == 'image/webp')
+{
+	@imagewebp($image);
+}
+elseif($mime == 'image/bmp')
+{
+	@imagebmp($image);
+}
+else
+{
+	@imagepng($image);
+}
 //删除图片以释放空间
 @imagedestroy($image);
 if($imageurl != '')
