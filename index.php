@@ -12,8 +12,8 @@ font=字体文件，默认=./fonts/arialuni.ttf（Unicode），可选
 text=文本，默认=（空白则等效直接输出背景图），可选
 */
 //图像资源
-$image_get = @basename($_GET['image']);
-$imageurl = $_GET['imageurl'];
+$image_get = @basename($_REQUEST['image']);
+$imageurl = $_REQUEST['imageurl'];
 if($image_get == '')
 {
 	$image_get = 'white.png';
@@ -28,52 +28,38 @@ if($imageurl != '')
 	$mime = $info['mime'];
 	if($mime == 'image/png')
 	{
-		$filetype == '.png';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.png';
 	}
 	elseif($mime == 'image/jpeg')
 	{
-		$filetype == '.jpeg';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-	$image_get = "download{$sran}{$filetype}";
+		$filetype = '.jpeg';
 	}
 	elseif($mime == 'image/gif')
 	{
-		$filetype == '.gif';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.gif';
 	}
 	elseif($mime == 'image/vnd.wap.wbmp')
 	{
-		$filetype == '.wbmp';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.wbmp';
 	}
 	elseif($mime == 'image/x-xbitmap')
 	{
-		$filetype == '.xbm';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.xbm';
 	}
 	elseif($mime == 'image/webp')
 	{
-		$filetype == '.webp';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.webp';
 	}
 	elseif($mime == 'image/bmp')
 	{
-		$filetype == '.bmp';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.bmp';
 	}
 	else
 	{
-		$filetype == '.png';
-		@file_put_contents("./images/download{$sran}{$filetype}",$img);
-		$image_get = "download{$sran}{$filetype}";
+		$filetype = '.png';
 	}
+	@file_put_contents("./images/download{$sran}{$filetype}",$img);
+	$image_get = "download{$sran}{$filetype}";
 }
 else
 {
@@ -113,9 +99,9 @@ else
 	$image = @imagecreatefrompng("./images/{$image_get}");
 }
 //颜色
-$r = $_GET['r'];
-$g = $_GET['g'];
-$b = $_GET['b'];
+$r = $_REQUEST['r'];
+$g = $_REQUEST['g'];
+$b = $_REQUEST['b'];
 if($r == '')
 {
 	$r = "0";
@@ -130,37 +116,37 @@ if($b == '')
 }
 $color = @imagecolorallocate($image,$r,$g,$b);
 //字体大小
-$size = $_GET['size'];
+$size = $_REQUEST['size'];
 if($size == '')
 {
 	$size = '30';
 }
 //字体倾斜的角度
-$i = $_GET['i'];
+$i = $_REQUEST['i'];
 if($i == '')
 {
 	$i = '0';
 }
 //起始文字的x、y坐标
-$x = $_GET['x'];
-$y = $_GET['y'];
+$x = $_REQUEST['x'];
+$y = $_REQUEST['y'];
 if($x == '' || $y == '')
 {
 	$x = "10";
 	$y = "40";
 }
 //字体文件
-$font = @basename($_GET['font']);
+$font = @basename($_REQUEST['font']);
 if($font == '')
 {
 	$font = @realpath('fonts/arialuni.ttf');
 }
 else
 {
-	$font = @realpath('fonts/'.$_GET['font']);
+	$font = @realpath('fonts/'.$_REQUEST['font']);
 }
 //文本，使用"%0a"换行
-$text = $_GET['text'];
+$text = $_REQUEST['text'];
 //绘制文字
 @imagettftext($image,$size,$i,$x,$y,$color,$font,$text);
 //输出图像资源
